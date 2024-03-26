@@ -8,9 +8,18 @@ public class ContaEspecial extends Conta{
 		this.limite = limite;
 	}
 
+	public double getLimite() {
+		return limite;
+	}
+
+	public void setLimite(double limite) {
+		this.limite = limite;
+	}
+
 	public boolean sacar(double valor) {
-		if(this.saldo >= valor) {
-			this.saldo = this.saldo - (valor * 0.99);
+		if(getSaldo() >= valor) {
+			double novoSaldo = getSaldo() - (valor * 0.99);
+			setSaldo(novoSaldo);
 			return true;
 		} else {
 			return false;

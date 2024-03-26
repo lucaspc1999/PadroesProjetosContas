@@ -1,8 +1,9 @@
 package contas;
 
+
 public class Conta {
-	public int numero;
-	public double saldo;
+	private int numero;
+	private double saldo;
 
 
 
@@ -16,6 +17,17 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
 	public boolean sacar(double valor) {
 		if(this.saldo >= valor) {
@@ -35,7 +47,7 @@ public class Conta {
 		}
 	}
 
-	double getSaldo() {
+	public double getSaldo() {
 		return this.saldo;
 	}
 }
